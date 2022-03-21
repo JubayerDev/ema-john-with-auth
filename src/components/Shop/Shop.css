@@ -13,11 +13,52 @@
     width: 264px;
     height: 944px;
     background-color: #FFE0B3;
+    position: relative;
 }
 .order-summary{
     font-style: normal;
     font-size: 25px;
     color: #1C2B35;
     text-align: center;
-    margin: 28px 0 28px 0;
+    margin: 28px 0 50px 0;
+}
+.cart-container p{
+    color: #2A414F;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 23px;
+}
+.cart-container h6{
+    font-size: 21px;
+    font-weight: 400;
+    color: #0E161A;
+    margin-left: 23px;
+}
+
+.clear-cart-btn{
+    padding: 17px 75px;
+    border: none;
+    background-color: #FF3030;
+    color: white;
+    font-size: 17px;
+    border-radius: 4px;
+    position: absolute;
+    right: 16px;
+    left: 16px;
+    display: block;
+}
+
+.review-btn{
+    padding: 17px 75px;
+    border: none;
+    background-color: #FF9900;
+    border-radius: 4px;
+    position: absolute;
+    right: 10px;
+    left: 16px;
+    bottom: 435px;
+}
+.review-btn small{
+    color: white;
+    font-size: 14px;
 }
