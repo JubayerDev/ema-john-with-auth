@@ -6,4 +6,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 45px;
+    margin: 100px 0 0 70px;
+}
+
+.cart-container{
+    width: 264px;
+    height: 944px;
+    background-color: #FFE0B3;
+}
+.order-summary{
+    font-style: normal;
+    font-size: 25px;
+    color: #1C2B35;
+    text-align: center;
+    margin: 28px 0 28px 0;
 }
