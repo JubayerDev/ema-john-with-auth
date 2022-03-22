@@ -1,0 +1,35 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 70px;
+    margin-left: 120px;
+    margin-bottom: 100px;
+}
+.img-section img{
+    width: 70%;
+    height: 70%;
+    margin-top: 50px;
+}
+.discount-text{
+    color: #FF9900;
+}
+h1{
+    color: #1C2B35;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.title-text{
+    color: #2A414F;
+}
+.wrapper button{
+    border: none;
+    background-color: #FF9900;
+    color: #0E161A;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 60px;
+    border-radius: 3px;
+}
