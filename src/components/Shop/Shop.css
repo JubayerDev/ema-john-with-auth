@@ -46,6 +46,7 @@
     right: 16px;
     left: 16px;
     display: block;
+    cursor: pointer;
 }
 
 .review-btn{
@@ -57,6 +58,7 @@
     right: 10px;
     left: 16px;
     bottom: 435px;
+    cursor: pointer;
 }
 .review-btn small{
     color: white;

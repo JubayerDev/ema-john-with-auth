@@ -40,6 +40,9 @@
 }
 
 .product-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     background-color: #FFE0B3;
     border: none;
@@ -54,4 +57,7 @@
 }
 .product-btn:hover{
     background-color: orange;
+}
+.product-btn p{
+    margin-right: 5px;
 }
