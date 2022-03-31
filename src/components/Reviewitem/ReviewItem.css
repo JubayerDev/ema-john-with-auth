@@ -19,3 +19,15 @@
     justify-content: space-between;
     width: 100%;
 }
+.delete-container{
+    display: flex;
+    align-items: center;
+}
+.delete-icon{
+    color: rgba(235,87,87,1);
+    background-color: rgba(235,87,87,0.3);
+    border: 1px solid #ddd;
+    padding: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+}

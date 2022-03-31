@@ -2,7 +2,8 @@ import React from 'react';
 import './ReviewItem.css';
 import {AiFillDelete} from 'react-icons/ai'
 
-const ReviewItem = ({product}) => {
+const ReviewItem = (props) => {
+    const { product, handleRemoveProduct } = props;
     const { name,img, price, shipping, quantity } = product;
     return (
         <div className='review-item'>
@@ -17,7 +18,7 @@ const ReviewItem = ({product}) => {
                     <p><small>Quantity: { quantity}</small></p>
                 </div>
                 <div className="delete-container">
-                    <AiFillDelete size={ 30}/>
+                    <AiFillDelete onClick={()=>handleRemoveProduct(product)} className='delete-icon' size={ 30}/>
                 </div>
             </div>
         </div>
