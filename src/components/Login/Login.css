@@ -29,6 +29,7 @@
 }
 
 .input-group input {
+    padding-left: 5px;
     width: 415px;
     height: 55px;
     border: 1px solid #95A0A7;

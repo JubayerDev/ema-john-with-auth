@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import swal from 'sweetalert';
 
 const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate()
+
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
 
     const handleEmailBlur = (e) => {
         setEmail(e.target.value);
@@ -20,12 +26,26 @@ const Signup = () => {
         setConfirmPassword(e.target.value);
     }
 
+    if (user) {
+        navigate('/shop')
+    }
+
     const handleCreateUser = (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
             setError("Password didn't match");
             return;
         }
+        if (password.length < 6) {
+            setError('Password must be 6 characters or longer!');
+            return;
+        }
+        createUserWithEmailAndPassword(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            swal("Good job!", "Account Created!", "success");
     }
 
     return (
