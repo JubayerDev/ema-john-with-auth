@@ -17,3 +17,6 @@
 .nav-items a:hover{
     color: orange;
 }
+.sign-out-btn{
+    margin-left: 20px;
+}

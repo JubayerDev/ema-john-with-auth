@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import {FcGoogle} from 'react-icons/fc'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -16,8 +16,12 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
+    
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location?.state?.from?.pathname || '/';
 
     const handleEmailBlur = e => {
         setEmail(e.target.value);
@@ -27,13 +31,13 @@ const Login = () => {
     }
 
     if (user) {
-        navigate('/shop');
+        navigate(from, {replace: true});
     }
 
     const handleUserSignIn = e => {
         e.preventDefault();
         signInWithEmailAndPassword(email, password);
-        
+        swal("Good job!", "Login Successful!", "success");
     }
     return (
         <div className='form-container'>
